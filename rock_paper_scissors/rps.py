@@ -1,9 +1,18 @@
 #!/usr/bin/python
 
 import sys
+#Itertools has the product() which is basically the cross-product 
+import itertools
+
+#Here are the possible outcomes
+rps_outcomes = ["rock", "paper", "scissors"]
 
 def rock_paper_scissors(n):
-  pass 
+  #this is a list of tuples
+  result = list(itertools.product(rps_outcomes, repeat=n))
+  # print(result)
+  # we need to turn each list of tuples into real lists
+  return [list(outcome) for outcome in result]
 
 
 if __name__ == "__main__":
