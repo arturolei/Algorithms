@@ -10,9 +10,9 @@ something like this:
 
  1. `stock_prices` [X]
  2. `recipe_batches` [X]
- 3. `eating_cookies` []
+ 3. `eating_cookies` [X]
  4. `rock_paper_scissors` [X]
- 5. `making_change`
+ 5. `making_change` []
  6. [Stretch Problem] `knapsack`
 
 For each problem, `cd` into the directory, read the instructions for the
