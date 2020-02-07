@@ -3,7 +3,17 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  # The amount of each ingredient determines the number of batches possible
+  #let's keep track per ingredient; minimum number = 
+  num_batch_possible = []
+  for key in recipe.keys():
+    if key in ingredients.keys(): #make sure we have ingredient
+      batches_possible = ingredients[key] // recipe[key]
+    else:
+      return 0 #If the recipe has an ingredient that's not in our pantry, we can't make any
+    num_batch_possible.append(batches_possible)
+
+  return min(num_batch_possible)
 
 
 if __name__ == '__main__':
