@@ -8,11 +8,11 @@ There isn't an official prescribed order for tackling the problems, though a
 subjective ranking of the given problems from easiest to hardest might go
 something like this:
 
- 1. `stock_prices`
- 2. `recipe_batches`
- 3. `eating_cookies`
- 4. `rock_paper_scissors`
- 5. `making_change`
+ 1. `stock_prices` [X]
+ 2. `recipe_batches` [X]
+ 3. `eating_cookies` [X]
+ 4. `rock_paper_scissors` [X]
+ 5. `making_change` []
  6. [Stretch Problem] `knapsack`
 
 For each problem, `cd` into the directory, read the instructions for the
