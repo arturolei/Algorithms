@@ -2,8 +2,20 @@
 
 import sys
 
-def making_change(amount, denominations):
-  pass 
+def making_change(amount, denominations): 
+  cache = [1 for i in range(amount + 1)]                          
+  if amount < 0: #Negative money
+    return 0                                        
+  elif amount < 5: #if it's less than 5 cents, there's only way to do it!
+    return 1                                        
+  else:
+    for coin in denominations[1:]: # cycle through denominations   
+
+      for higher_amount in range(coin, amount + 1): 
+        difference = higher_amount - coin           
+        cache[higher_amount] += cache[difference]   
+
+    return cache[amount]                        
 
 
 if __name__ == "__main__":
