@@ -6,10 +6,10 @@ def find_max_profit(prices):
     max_profit = None
     # value is each individual price, prices is the array of prices
     for index, value in enumerate(prices):
-        # i + 1 is required in case there are only losses all day.  Otherwise it will return 0 instead of the min loss
+        # index + 1 is required in case there are only losses all day.  Otherwise it will return 0 instead of minimum loss
         for j in range(index + 1, len(prices)):
             buy_sell = prices[j] - value
-            # finds the biggest difference between any of the stock prices in the array and assigns it to max_profit
+            # finds the biggest difference between any of the stock prices in the array
             if max_profit == None or buy_sell > max_profit:
                 max_profit = buy_sell
     return max_profit
